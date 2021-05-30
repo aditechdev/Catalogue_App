@@ -5,8 +5,8 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-        child: Center(
+    return Scaffold(
+        body: Center(
           child: Container(
             child: Text("Hello WOrld $days" ),
           ),
