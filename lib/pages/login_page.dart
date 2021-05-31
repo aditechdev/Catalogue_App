@@ -6,64 +6,67 @@ class LoginPage extends StatelessWidget {
     return Material(
       color: Colors.white,
       
-      child: Column(
-        children: [
-          Image.asset("assets/images/login_image.png", fit: BoxFit.cover,
-          
-          ),
-          SizedBox(
-            height: 20.0,
-          ),
-          Text("Welcome", style: TextStyle(
-            fontSize: 24,
-            fontWeight: FontWeight.bold
+      child: SingleChildScrollView(
+              child: Column(
+          children: [
+            SizedBox(
+              height: 100.0,
+            ),
+            Image.asset("assets/images/login_image.png", fit: BoxFit.cover,
+            
+            ),
+            SizedBox(
+              height: 20.0,
+            ),
+            Text("Welcome", style: TextStyle(
+              fontSize: 28,
+              fontWeight: FontWeight.bold
 
-          ),
-          ),
-          SizedBox(
-            height: 20.0,
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 32),
-            child: Column(
-              children: [
-                TextFormField(
-                  decoration: InputDecoration(
-                    hintText: "Enter User Name",
-                    labelText: "UserName"
-                    
+            ),
+            ),
+            SizedBox(
+              height: 20.0,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 32),
+              child: Column(
+                children: [
+                  TextFormField(
+                    decoration: InputDecoration(
+                      hintText: "Enter User Name",
+                      labelText: "UserName"
+                      
+                    ),
                   ),
+                TextFormField(
+                  obscureText: true,
+                decoration: InputDecoration(
+                  hintText: "Enter Password",
+                  labelText: "Password"
+                  
                 ),
-              TextFormField(
-                obscureText: true,
-              decoration: InputDecoration(
-                hintText: "Enter Password",
-                labelText: "Password"
-                
+              ),
+                ],
               ),
             ),
-              ],
+            SizedBox(
+              height: 40.0,
             ),
-          ),
-          SizedBox(
-            height: 20.0,
-          ),
-          ElevatedButton(
-            onPressed: (){
-              print("Hi Aditya ANand");
-            },
-           child: Text("Login",
-          //  style: TextButton.styleFrom(
+            ElevatedButton(
+              style: TextButton.styleFrom(minimumSize: Size(150, 50)),
+              onPressed: (){
+                print("Hi Aditya ANand");
+              },
+             child: Text("Login",
+             
+             ),
             
-
-          //  ),
-           ),
+            
+            )
           
-          
-          )
-        
-          
-        ],
+            
+          ],
+        ),
       ),
       
     );
