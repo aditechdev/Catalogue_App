@@ -19,9 +19,7 @@ class MyApp extends StatelessWidget {
         fontFamily: GoogleFonts.lato().fontFamily,
         // primaryTextTheme: GoogleFonts.latoTextTheme(),
       ),
-      darkTheme: ThemeData(
-        brightness: Brightness.dark
-      ),
+      darkTheme: ThemeData(brightness: Brightness.dark),
       // debugShowCheckedModeBanner: false,
 
       initialRoute: "/",
@@ -30,7 +28,6 @@ class MyApp extends StatelessWidget {
         "/": (context) => LoginPage(),
         MyRoutes.homeRoute: (context) => HomePage(),
         MyRoutes.loginRoute: (context) => LoginPage(),
-
       },
     );
   }
