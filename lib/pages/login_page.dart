@@ -1,28 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_catalogue/utils/routes.dart';
 
 class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
       color: Colors.white,
-      
       child: SingleChildScrollView(
-              child: Column(
+        child: Column(
           children: [
             SizedBox(
               height: 100.0,
             ),
-            Image.asset("assets/images/login_image.png", fit: BoxFit.cover,
-            
+            Image.asset(
+              "assets/images/login_image.png",
+              fit: BoxFit.cover,
             ),
             SizedBox(
               height: 20.0,
             ),
-            Text("Welcome", style: TextStyle(
-              fontSize: 28,
-              fontWeight: FontWeight.bold
-
-            ),
+            Text(
+              "Welcome",
+              style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
             ),
             SizedBox(
               height: 20.0,
@@ -33,19 +32,13 @@ class LoginPage extends StatelessWidget {
                 children: [
                   TextFormField(
                     decoration: InputDecoration(
-                      hintText: "Enter User Name",
-                      labelText: "UserName"
-                      
-                    ),
+                        hintText: "Enter User Name", labelText: "UserName"),
                   ),
-                TextFormField(
-                  obscureText: true,
-                decoration: InputDecoration(
-                  hintText: "Enter Password",
-                  labelText: "Password"
-                  
-                ),
-              ),
+                  TextFormField(
+                    obscureText: true,
+                    decoration: InputDecoration(
+                        hintText: "Enter Password", labelText: "Password"),
+                  ),
                 ],
               ),
             ),
@@ -54,21 +47,16 @@ class LoginPage extends StatelessWidget {
             ),
             ElevatedButton(
               style: TextButton.styleFrom(minimumSize: Size(150, 50)),
-              onPressed: (){
-                print("Hi Aditya ANand");
+              onPressed: () {
+                Navigator.pushNamed(context, MyRoutes.homeRoute);
               },
-             child: Text("Login",
-             
-             ),
-            
-            
+              child: Text(
+                "Login",
+              ),
             )
-          
-            
           ],
         ),
       ),
-      
     );
   }
 }
